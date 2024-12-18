@@ -77,7 +77,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Extensions (Ctrl + Shift + x)
 
-auto import
+auto import<br />
 chrome extension: react developer tools
 
 ### Free picture resources

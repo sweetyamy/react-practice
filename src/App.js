@@ -6,6 +6,7 @@ import './App.css';
 function App() {
   // Variable declaration
   const name = 'amy';
+  const list = ['Milk', 'Strawberry', 'Banana'];
   return (
     <Fragment>
       {/* Apply CSS styles using a className */}
@@ -16,9 +17,12 @@ function App() {
 
       {/* Render a list of items */}
       <ul>
-        <li>Milk</li>
+        {/* <li>Milk</li>
         <li>Strawberry</li>
-        <li>Banana</li>
+        <li>Banana</li> */}
+        {list.map((item) => (
+          <li>{item}</li>
+        ))}
       </ul>
 
       {/* 
