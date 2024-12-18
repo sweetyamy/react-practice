@@ -6,6 +6,14 @@ import Avartar from './components/Avartar';
 export default function AppProfile() {
   return (
     <>
+      <button
+        onClick={(event) => {
+          console.log(event);
+          alert('Button clicked');
+        }}
+      >
+        Button
+      </button>
       <Avartar
         image='https://media.istockphoto.com/id/1450969748/photo/developer-working-with-new-program.jpg?s=2048x2048&w=is&k=20&c=iFBySg9gYWU20rRPhwafcTBroJB_0qCBuotH2BcPQGs='
         isNew={true}
