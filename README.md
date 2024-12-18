@@ -77,9 +77,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Extensions (Ctrl + Shift + x)
 
-auto import<br />
-chrome extension: react developer tools
+- chrome extension: react developer tools<br />
+- auto import<br />
+- react snippet: 단축으로 탬플릿을 만들 수 있음
+- 또는 custom snippet - global.code-snippets
 
 ### Free picture resources
 
 https://unsplash.com
+
+### Transform HTML to JSX
+
+https://transform.tools/html-to-jsx
+
+### CSS Box-shadow generator
+
+https://cssgenerator.org/box-shadow-css-generator.html

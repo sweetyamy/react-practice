@@ -3,7 +3,7 @@ import './App.css';
 
 // Use <Fragment> or <> to return multiple elements without adding extra nodes to the DOM
 
-function App() {
+function AppJSX() {
   // Variable declaration
   const name = 'amy';
   const list = ['Milk', 'Strawberry', 'Banana'];
@@ -40,4 +40,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppJSX;
