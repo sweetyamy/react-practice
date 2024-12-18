@@ -1,22 +1,42 @@
 import React, { useEffect, useState } from 'react';
 
 export default function Products() {
-  const [count, setCount] = useState(0);
-  const [products, setPRoducts] = useState([]);
+  // State to hold the list of products
+  const [products, setProducts] = useState([]);
+  // State to manage the checkbox status
+  const [checked, setChecked] = useState(false);
+
+  // Toggles the 'checked' state when the checkbox is clicked
+  const handleChange = () => setChecked((prev) => !prev);
 
   useEffect(() => {
-    fetch('data/products.json')
-      .then((res) => res.json())
+    // Fetch product data
+    // If the checkbox is checked, fetch 'sale_product.json', otherwise fetch 'product.json'
+    fetch(`data/${checked ? 'sale_' : ''}products.json`)
+      .then((res) => res.json()) // Parse the JSON response
       .then((data) => {
-        console.log('data:', data);
-        setPRoducts(data);
+        console.log('data:', data); // Log the fetched data to the console
+        setProducts(data); // Update the products state with the fetched data
       });
+
+    // Cleanup function runs when the component unmounts or 'checked' changes
     return () => {
-      console.log('clean');
+      console.log('clean'); // Log 'clean' to indicate cleanup
     };
-  }, []);
+  }, [checked]); // Dependency: Re-run fetch when 'checked' changes
+
   return (
     <>
+      {/* Checkbox to toggle between 'all products' and 'sale products' */}
+      <input
+        id='checkbox'
+        type='checkbox'
+        checked={checked}
+        onChange={handleChange}
+      />
+      <label htmlFor='checkbox'>Show Only Hot Sale</label>
+
+      {/* Display the list of products */}
       <ul>
         {products.map((product) => (
           <li key={product.id}>
@@ -27,7 +47,6 @@ export default function Products() {
           </li>
         ))}
       </ul>
-      <button onClick={() => setCount((prev) => prev + 1)}>{count}</button>
     </>
   );
 }
