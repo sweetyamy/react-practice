@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+```
+npx create-react-app my-app
+cd my-app
+npm start
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +74,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Extensions (Ctrl + Shift + x)
+
+auto import
+chrome extension: react developer tools
+
+### Free picture resources
+
+https://unsplash.com
