@@ -15,9 +15,27 @@
   padding: 1rem;
   background-color: #ebebeb;
   border-radius: 10px;
-  box-shadow: 3px 2px 24px -6px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 3px 2px 24px -6px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 3px 2px 24px -6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  box-shadow: 3px 2px 15px -6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 2px 15px -6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 2px 15px -6px rgba(0, 0, 0, 0.5);
   ;
+}
 
+.avartar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.new {
+  position: absolute;
+  left: 80%;
+  top: 10%;
+  background-color: aqua;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
