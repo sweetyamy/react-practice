@@ -95,3 +95,12 @@ https://transform.tools/html-to-jsx
 ### CSS Box-shadow generator
 
 https://cssgenerator.org/box-shadow-css-generator.html
+
+### useState
+
+### useEffect
+
+### useImmer
+
+Immer is a very powerful tool for managing state in React, especially when the state is complex or has a deeply nested structure. 😊 <br />
+useImmer essentially wraps useState, allowing you to update state using produce for a more intuitive and streamlined approach.<br />
