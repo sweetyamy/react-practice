@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useCallback, useMemo, useReducer } from 'react';
 import personReducer from './reducer/person-reducer';
 
 export default function AppMentorsButton() {
@@ -7,29 +7,29 @@ export default function AppMentorsButton() {
   const [person, dispatch] = useReducer(personReducer, inintialPerson);
 
   // Update the name of a mentor
-  const handleUpdate = () => {
+  const handleUpdate = useCallback(() => {
     const prev = prompt('Whose name would you like to change?');
     const current = prompt('What would you like to change the name to?');
 
     dispatch({ type: 'updated', prev, current });
-  };
+  }, []);
 
   // Add a new mentor to the list
-  const handleAdd = () => {
+  const handleAdd = useCallback(() => {
     const name = prompt('Please enter the name of the mentor you want to add.');
     const title = prompt(
       'Please enter the title of the mentor you want to add.'
     );
 
     dispatch({ type: 'added', name, title });
-  };
+  }, []);
 
   // Delete a mentor from the list
-  const handleDelete = () => {
+  const handleDelete = useCallback(() => {
     const name = prompt('Whose name would you like to delete?');
 
     dispatch({ type: 'deleted', name });
-  };
+  }, []);
 
   return (
     <div>
@@ -51,8 +51,10 @@ export default function AppMentorsButton() {
   );
 }
 
-function Button({ text, onClick }) {
+// eslint-disable-next-line no-undef
+const Button = memo(({ text, onClick }) => {
   console.log('Button:', text, 're-rendering');
+  const result = useMemo(() => calcuateSomething(), []);
   return (
     <button
       onClick={onClick}
@@ -65,9 +67,16 @@ function Button({ text, onClick }) {
         cursor: 'pointer'
       }}
     >
-      {text}
+      {`${text} ${result}`}
     </button>
   );
+});
+
+function calcuateSomething() {
+  for (let i = 0; i < 10000; i++) {
+    console.log(':)');
+  }
+  return 10;
 }
 
 // Initial person object with mentors
