@@ -120,7 +120,12 @@ useImmer essentially wraps useState, allowing you to update state using produce 
 ### CSS libraries
 
 - postcss
-- tailwind
+- tailwind: [https://tailwindcss.com/](https://tailwindcss.com/)
+  ```
+  npm install -D tailwindcss
+  npx tailwindcss init
+  ```
+  Tailwind vs code extension: Tailwind CSS IntelliSense
 - sass-loader
 - styled components: [https://styled-components.com](https://styled-components.com/)
   `npm install styled-components`
