@@ -107,8 +107,22 @@ useImmer essentially wraps useState, allowing you to update state using produce 
 
 ### Context API
 
+![alt text](image.png)
+
 ### Umbrella technic
 
 ### useMemo
 
 ### useCallback
+
+### Custom Hooks
+
+### CSS libraries
+
+- postcss
+- tailwind
+- sass-loader
+- styled components: [https://styled-components.com](https://styled-components.com/)
+  `npm install styled-components`
+
+### webpack
